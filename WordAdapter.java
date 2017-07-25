@@ -38,13 +38,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         Word currentWord = getItem(position);
 
         // Find and set the Views in the list_item.xml layout
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_textView);
+        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwak_textView);
+        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         miwokTextView.setText(currentWord.getMiwokTranslation());
 
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.imageView);
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
         if(currentWord.hasImage()){
             imageView.setImageResource(currentWord.getImageResourceID());
             imageView.setVisibility(View.VISIBLE);
